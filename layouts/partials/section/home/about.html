@@ -1,0 +1,10 @@
+<section id="about">
+    <h2 class="icon-h icon-child">&lt; About &gt;</h2>
+    <p>
+        {{ if .Site.Params.intro.about }}
+            {{ .Site.Params.intro.about }}
+        {{else}}
+            This is my personal website
+        {{end}}
+    </p>
+</section>

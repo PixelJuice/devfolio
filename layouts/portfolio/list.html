@@ -1,0 +1,6 @@
+{{ define "main"}}
+<main id="portfolio">
+    <h1 class="center">&lt; Selected Works &gt;</h1>
+    {{ range (.Paginator 5).Pages }} {{ partial "section/portfolio/project" . }} {{ end }}
+</main>
+{{end}}

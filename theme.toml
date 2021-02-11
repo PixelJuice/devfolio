@@ -1,0 +1,6 @@
+name = "devfolio"
+min_version = "0.1"
+
+[author]
+  name = "Jonas Johansson"
+  homepage = "http://www.jonasjohansson.dev"

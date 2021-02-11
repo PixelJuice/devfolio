@@ -1,0 +1,6 @@
+<section id="journal">
+    <h2 class="icon-h icon-flask">&lt; Latest Thought &gt;</h2>
+    {{ range first 3 (where site.RegularPages "Type" "blog") }}
+      {{ partial "section/home/journal-item" . }}
+    {{ end }}
+</section>

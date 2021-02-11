@@ -1,0 +1,18 @@
+{{ define "main"}}
+<main>
+<article>
+    <header>
+        <h1><a href="{{ .RelPermalink  }}">{{ .Title }}</a>
+            <small>{{ dateFormat "02/01/2006" .Date }}
+                {{ if .Site.Params.readingTime }}
+                  &nbsp;|&nbsp;
+                  {{ .ReadingTime }} min ({{ .WordCount }} words)
+                {{ end }}
+            </small></h1>
+      </header>
+      <section>
+        {{ .Content }}
+        </section>
+</article>
+</main>
+{{end}}

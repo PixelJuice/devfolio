@@ -1,0 +1,15 @@
+<article class="blog-summary dotted-border">
+    <div>
+        {{ range .Params.categories }}
+            {{partial "section/blog/blog-icon" . }}
+        {{end}}
+    </div>
+    <div>
+        <h2><a href="{{ .RelPermalink }}">&lt; {{.Title}} &gt;</a></h2>
+        <small class="icon-calendar-alt">&nbsp;{{ dateFormat "02/01/2006" .Date }} | 
+            {{ range .Params.categories }}
+            {{partial "section/blog/blog-small-icon" . }}
+            {{end}}</small>
+        <p>// {{ .Description }}</p>
+    </div>
+</article>

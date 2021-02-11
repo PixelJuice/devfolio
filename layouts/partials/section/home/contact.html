@@ -1,0 +1,42 @@
+<section id="contact">
+  <h2 class="icon-h icon-rocket">&lt; Contact &gt;</h2>
+  {{if .Site.Params.contact.email }}
+  <div class="grid">
+  <ul class="icon-ul">
+    <li class="icon-li icon-envelope">Email:</li>
+    <li>
+      <a href="mailto:{{.Site.Params.contact.email}}" target="_top">
+        {{if .Site.Params.contact.emailDisplay }}
+        {{.Site.Params.contact.emailDisplay}} {{else}}
+        {{.Site.Params.contact.email}} {{end}}</a
+      >
+    </li>
+  </ul>
+  {{end}} {{if .Site.Params.contact.phone }}
+  <ul class="icon-ul">
+    <li class="icon-li icon-phone">Phone:</li>
+    <li>
+      <a href="tel:{{.Site.Params.contact.phone}}">
+        {{if .Site.Params.contact.phoneDisplay }}
+        {{.Site.Params.contact.phoneDisplay}} {{else}}
+        {{.Site.Params.contact.phone}} {{end}}
+      </a>
+    </li>
+  </ul>
+  {{end}} {{if .Site.Params.contact.location }}
+  <ul class="icon-ul">
+    <li class="icon-li icon-location">Location:</li>
+    <li>
+      <a
+        href="https://www.google.com/maps/place/{{.Site.Params.contact.location}}"
+        target="_blank"
+      >
+        {{if .Site.Params.contact.locationDisplay }}
+        {{.Site.Params.contact.locationDisplay}} {{else}}
+        {{.Site.Params.contact.location}} {{end}}
+      </a>
+    </li>
+  </ul>
+</div>
+  {{end}}
+</section>

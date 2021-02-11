@@ -1,0 +1,17 @@
+{{ if or .Paginator.HasPrev .Paginator.HasNext }}
+<nav class="pagination" role="pagination">
+    {{ if .Paginator.HasPrev }}
+    <a href="{{ .Paginator.Prev.URL }}" rel="prev">
+      <svg><use xlink:href="sprites/light.svg#arrow-circle-left"></use></svg>
+    </a>
+    {{ else }}
+    <span></span>
+    {{ end }}
+    <span></span>
+    {{ if .Paginator.HasNext }}
+    <a href="{{ .Paginator.Next.URL }}" rel="next">
+      <svg><use xlink:href="sprites/light.svg#arrow-circle-right"></use></svg>
+    </a>
+    {{ end }}
+</nav>
+{{ end }}

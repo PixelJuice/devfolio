@@ -1,0 +1,10 @@
+{{ define "main"}}
+<main id="blog" class="inner">
+    <h1 class="center">&lt; Random Thoughts &gt;</h1>
+    <!--{{ range $name, $items := .Site.Taxonomies.categories }}
+<li><a href="{{ $.Site.BaseURL }}categories/{{ $name | urlize | lower }}">{{ $name }} &nbsp;<span>({{ len $items }})</span></a></li>
+{{ end }}-->
+
+    {{ range (.Paginator 10).Pages }} {{ partial "section/blog/blog-summary" . }} {{ end }}
+</main>
+{{end}}

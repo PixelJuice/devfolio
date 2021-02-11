@@ -1,0 +1,110 @@
+.top-nav {
+  display: flex;
+  flex-direction: row;
+  z-index: 100;
+  margin: 0rem 0 4rem 0;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  li {
+    margin-left: 1rem;
+  }
+}
+
+.hamburger {
+  display: none;
+}
+
+
+@media screen and (max-width: 768px) {
+
+  nav {
+    position: relative;
+  }
+
+  .hamburger {
+    position: absolute;
+    cursor: pointer;
+    right: 0%;
+    top: 50%;
+    transform: translate(-5%, -50%);
+    z-index: 2;
+    display: block;
+    background-color: white;
+    border-radius: 50%;
+    h3 {padding: 0.2rem 0.5rem; margin: 0;}
+    
+  }
+
+  .nav-links {
+    position: fixed;
+    background: #ffffff;
+    height: 100vh;
+    width: 100%;
+    left:0;
+    flex-direction: column;
+    clip-path: circle(1rem at 90% 5%);
+    -webkit-clip-path: circle(0rem at 87% 3%);
+    transition: all 0.3s ease-out;
+    pointer-events: none;
+  }
+  .nav-links.open {
+    clip-path: circle(100% at 50%);
+    -webkit-clip-path: circle(100% at 50%);
+    justify-content: center;
+    pointer-events: all;
+
+  }
+  .nav-links li {
+    opacity: 0;
+  }
+  li.fade {
+    opacity: 1;
+  }
+}
+
+
+
+
+nav {
+
+.nav-links a,
+.logo {
+  color: $base-font-color;
+  font-family: $mono-font-stack;
+}
+
+.nav-links a,
+.logo:visited {
+  color: $base-font-color;
+}
+
+.nav-links a:hover {
+  color: $link-hover-color;
+}
+
+
+
+.cursor {
+  color: $link-hover-color;
+  display: inline-block;
+  animation: cursor 1s infinite;
+}
+
+@keyframes cursor {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+}

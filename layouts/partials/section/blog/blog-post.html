@@ -1,0 +1,14 @@
+<article class="blog-post">
+    <h1 class="center"><a href="{{ .RelPermalink }}">{{.Title}}</a> </h1>
+    <p class="center"><small class="icon-calendar-alt">&nbsp;{{ dateFormat "02/01/2006" .Date }}</small></p>
+    <section class= "tags center">
+        <small class="">
+        {{ range .Params.tags }}
+        <span class="icon-tag"></span><a href="{{ $.Site.BaseURL }}/tags/{{ . | urlize }}">{{ . }}&nbsp;</a>
+        {{ end }}
+        </small>
+    </section>  
+    {{ .Content }}
+</article>
+{{partial "section/blog/blog-post-footer" . }}
+

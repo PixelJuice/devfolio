@@ -1,0 +1,6 @@
+{{ define "main"}}
+<main id="blog">
+    <h1 class="center">Random Thoughts</h1>
+    {{ range (.Paginator 5).Pages }} {{ partial "section/blog/blog-summary" . }} {{ end }}
+</main>
+{{end}}

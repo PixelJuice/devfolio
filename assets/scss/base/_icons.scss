@@ -1,0 +1,43 @@
+@include icon(briefcase);
+@include icon(code);
+@include icon(rocket);
+@include icon(flask);
+@include icon(child);
+@include icon(envelope);
+@include icon(phone);
+@include icon(link);
+@include icon(location);
+@include icon(heart);
+@include icon(paint-brush);
+@include icon(cubes);
+@include icon(calendar-alt);
+@include icon(gamepad);
+@include icon(spider-web);
+@include icon(folder);
+@include icon(file);
+@include icon(magic);
+@include icon(tag);
+
+//Brands
+@include brand-icon(steam);
+@include brand-icon(github);
+@include brand-icon(twitter);
+@include brand-icon(facebook);
+@include brand-icon(google-play);
+@include brand-icon(app-store-ios);
+@include brand-icon(amazon);
+@include brand-icon(microsoft);
+@include brand-icon(reddit-square);
+@include brand-icon(facebook-square);
+@include brand-icon(twitter-square);
+
+
+//special
+article > p > a {    
+    &::after {
+        @extend %fa-icon;
+        font-size: small;
+        color: $base-font-color;
+        content: icon-content(map-get($map: $icon-names, $key: "link"));
+      }
+  }

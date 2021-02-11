@@ -1,0 +1,12 @@
+<div class="polaroid">
+  <a rel="canonical" href="{{ .RelPermalink }}">
+    {{ with .Params.image }}
+      <img src="{{ . }}" />
+    {{ end }}
+    {{ with .Params.title }}
+      <h6 class="center">
+        {{ . }}
+      </h6>
+    {{end}}
+  </a>
+</div>

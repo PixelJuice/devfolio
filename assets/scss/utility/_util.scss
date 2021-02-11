@@ -1,0 +1,17 @@
+.light {
+    color: $ligh-font-color;
+}
+
+.center {
+    text-align: center;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.hidden {
+    visibility: hidden;
+  position: absolute;
+  text-indent: -9999px;
+}

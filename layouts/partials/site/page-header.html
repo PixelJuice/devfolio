@@ -1,0 +1,34 @@
+
+<nav class="top-nav">
+    <div>
+    <a class="logo" href="{{ if .Site.Params.Logo.LogoHomeLink }}{{ .Site.Params.Logo.LogoHomeLink }}{{else}}{{ .Site.BaseURL | relLangURL }}{{ end }}">
+        <h3><span class="light">~$</span> cd /jonasjohansson/ <span class="cursor">▍</span></h3>
+    </a>
+    </div>
+    <div class="hamburger">
+    <h3>&#9776;</h3>
+    </div>
+    <ul class="nav-links">        
+        {{ if .Site.Menus.main }}
+      {{ range sort .Site.Menus.main }}
+      <li>
+        <a href="{{ .URL }}" role="navigation">
+          <h3 class="icon-h {{ .Title }}">/{{ .Title }}</h3>       
+        </a>
+        </li>
+        {{ end }}
+        {{ end }}
+    </ul>
+</nav>
+<script>
+const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".nav-links");
+const links = document.querySelectorAll(".nav-links li");
+
+hamburger.addEventListener("click", () => {
+  navLinks.classList.toggle("open");
+  links.forEach(link => {
+    link.classList.toggle("fade");
+  });
+});
+</script>

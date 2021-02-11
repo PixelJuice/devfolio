@@ -1,0 +1,10 @@
+@include medium-screen {
+    section#portfolio .grid {
+        grid-template-columns: repeat(3, minmax(1rem, 31.25rem));
+        gap: 2rem;
+    }
+}
+
+#home ul {
+    margin-block-start: 0em;
+}

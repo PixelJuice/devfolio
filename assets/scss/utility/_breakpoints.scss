@@ -1,0 +1,14 @@
+$switch-inner-grid: 32.25rem !default;
+$grid-medium-breakpoint: 62.5rem !default; // Medium screen breakpoint for grid.
+
+@mixin medium-screen {
+    @media only screen and (min-width: #{$grid-medium-breakpoint}) {
+        @content;
+    }
+}
+
+@mixin small-screen {
+    @media only screen and (min-width: #{$grid-medium-breakpoint}) {
+        @content;
+    }
+}

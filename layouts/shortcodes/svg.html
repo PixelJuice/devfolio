@@ -1,0 +1,5 @@
+{{ if .IsNamedParams }}
+<svg><use xlink:href="sprites/{{ if .Get "style" }}{{ .Get "style" }}{{ else }}regular{{ end }}.svg#{{ .Get "id" }}"></use></svg>
+{{ else }}
+<svg><use xlink:href="sprites/light.svg#{{ index .Params 0 }}"></use></svg>
+{{ end }}

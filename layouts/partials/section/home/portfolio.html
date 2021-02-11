@@ -1,0 +1,8 @@
+<section id="portfolio" class="md-span-two">
+    <h2 class="icon-h icon-briefcase">&lt; Selected Projects &gt;</h2>    
+    <div class="grid">
+        {{ range first 3 (where site.RegularPages "Type" "portfolio") }}
+        {{ partial "section/home/portfolio-item" . }}
+        {{end}}
+    </div>
+</section>

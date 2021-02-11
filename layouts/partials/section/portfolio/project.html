@@ -1,0 +1,76 @@
+<article class="one-column md-two-columns dotted-border">
+  <div class="polaroid">
+    {{ if .Params.video }}
+
+    <div class="youtube">
+      <iframe src="{{ .Params.video }}" allowfullscreen></iframe>
+    </div>
+    <h6>{{.Title}}</h6>
+    {{ else }} {{ with .Params.image }}
+    <img src="{{ . }}" />
+    {{ end }} {{end}}
+  </div>
+
+  <section>
+    <header>
+      <h1 class="center"><a href="{{ .RelPermalink }}">{{.Title}}</a></h1>
+      <p class="center italic"><small>{{ .Params.description }}</small></p>
+    </header>
+    
+    {{ if .Params.role }}
+    <h2>Role</h2>
+    {{ if .Params.role.developer }}
+    <h3 class="icon-h icon-code">Developer:</h3>
+    <p>{{.Params.role.developer}}</p>
+    {{end}}
+    {{ if .Params.role.artist }}
+    <h3 class="icon-h icon-paint-brush">Artist:</h3>
+    <p>{{.Params.role.artist}}</p>
+    {{end}}
+    {{ if .Params.role.leveldesigner }}
+    <h3 class="icon-h icon-cubes">Level designer:</h3>
+    <p>{{.Params.role.leveldesigner}}</p>
+    {{end}}
+    {{end}}
+
+      {{ if .Params.available }}
+      <h2>Available at</h2>
+      <ul class="icon-ul grid">
+        {{ if .Params.available.link }}
+        <li class="icon-li icon-link">
+          <a href="{{ .Params.available.link }}" target="_blank">Website</a>
+        </li>
+        {{ end }} {{ if .Params.available.googleplaystore }}
+        <li class="icon-li brand-icon-google-play">
+          <a href="{{ .Params.available.googleplaystore }}" target="_blank"
+            >Google Play Store</a
+          >
+        </li>
+        {{ end }} {{ if .Params.available.apppleappstore }}
+        <li class="icon-li brand-icon-app-store-ios">
+          <a href="{{ .Params.available.apppleappstore }}" target="_blank"
+            >iOS App Store</a
+          >
+        </li>
+        {{ end }} {{ if .Params.available.amazon }}
+        <li class="icon-li brand-icon-amazon">
+          <a href="{{ .Params.available.amazon }}" target="_blank">Amazon</a>
+        </li>
+        {{ end }} {{ if .Params.available.facebook }}
+        <li class="icon-li brand-icon-facebook">
+          <a href="{{ .Params.available.facebook }}" target="_blank"
+            >Facebook</a
+          >
+        </li>
+        {{ end }} {{ if .Params.available.microsoft }}
+        <li class="icon-li brand-icon-microsoft">
+          <a href="{{ .Params.available.microsoft }}" target="_blank"
+            >Microsoft</a
+          >
+        </li>
+        {{ end }}
+      </ul>
+      {{ end }}
+
+  </section>
+</article>
