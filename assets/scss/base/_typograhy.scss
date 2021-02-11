@@ -1,5 +1,13 @@
-$base-font-size: 125%;
+
+$base-font-size: 100%;
 $base-line-height: 1.4;
+
+html {
+    @include medium-screen { 
+        font-size: 125%;
+    }
+
+}
 
 a {
     text-decoration: none;

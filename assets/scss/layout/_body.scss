@@ -14,13 +14,15 @@ html > body {
 .wrapper {
     max-width: 62.5rem;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 1rem;
+    @include medium-screen { 
+        padding: 0 2rem;
+    }
 }
 
 .inner {
     max-width: 66ch;
     margin: 0 auto;
-    padding: 0 2rem;
 }
 
 .one-column {
@@ -78,5 +80,12 @@ section .grid {
       -webkit-transform: rotate(-45deg);
       -moz-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
+    }
+  }
+
+.mobile-hide {
+    display: none;
+    @include medium-screen {
+        display: block;
     }
   }

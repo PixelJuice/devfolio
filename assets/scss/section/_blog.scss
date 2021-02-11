@@ -1,9 +1,12 @@
 .blog-summary {
   display: grid;
-  grid-template-columns: 4rem 1fr;
+  grid-template-columns: 1fr;
+  @include medium-screen { 
+    grid-template-columns: 4rem 1fr;
+  }
   gap: 1rem;
   margin: 1rem auto;
-  padding: 2rem 0;
+  padding: 1rem 0;
   max-width: 66ch;
   h2 {
     margin: 0;
